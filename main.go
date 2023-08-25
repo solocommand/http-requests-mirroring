@@ -125,7 +125,7 @@ func forwardRequest(req *http.Request, reqSourceIP string, reqDestionationPort s
 
 	// create a new url from the raw RequestURI sent by the client
 	url := fmt.Sprintf("%s%s", string(*fwdDestination), req.RequestURI)
-	fwdUrl := fmt.Sprintf("https://%s%s", req.Host, req.RequestURI)
+	// fwdUrl := fmt.Sprintf("https://%s%s", req.Host, req.RequestURI)
 	// log.Println("Forwarding", req.Method, fwdUrl, "to", url)
 
 	// create a new HTTP request
